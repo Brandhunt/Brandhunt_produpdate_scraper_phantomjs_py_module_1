@@ -31,8 +31,8 @@ for cont in filecont:
     if count < 41 or count > 55:
         newcont = newcont + cont
     count = count + 1
-#    exec(cont, helper.__dict__)
 exec(newcont, helper.__dict__)
+exec('mainfunc()', helper.__dict__)
 
 #print(type(helper)) # prints "<class 'module'>"
 #helper.a # prints "5"
