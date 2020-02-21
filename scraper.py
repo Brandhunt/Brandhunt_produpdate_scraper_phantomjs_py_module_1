@@ -26,8 +26,11 @@ filecont = json.loads(filecont)
 spec = importlib.util.spec_from_loader('helper', loader=None)
 helper = importlib.util.module_from_spec(spec)
 newcont = ''
+count = 1
 for cont in filecont:
-    newcont = newcont + cont
+    if count < 41 || count > 55:
+        newcont = newcont + cont
+    count = count + 1
 #    exec(cont, helper.__dict__)
 exec(newcont, helper.__dict__)
 
