@@ -23,7 +23,7 @@ spec = importlib.util.spec_from_loader('helper', loader=None)
 helper = importlib.util.module_from_spec(spec)
 newcont = ''
 
-del filecont[-1:-3]
+del filecont[-1:-16]
 
 for cont in filecont:
     newcont = newcont + cont
